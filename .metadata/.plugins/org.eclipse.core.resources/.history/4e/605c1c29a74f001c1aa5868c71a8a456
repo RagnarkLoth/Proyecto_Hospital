@@ -1,0 +1,14 @@
+package models;
+
+import controllers.Controller;
+
+public class TreatmentVo {
+	
+	private Controller controller;
+
+	public void setController(Controller controller) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,6 @@
+package controllers;
+
+public class App {
+	Relations relations = new Relations();
+	relations.startSystem();
+}

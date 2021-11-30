@@ -1,0 +1,23 @@
+package controllers;
+
+import views.ConsultPerson;
+import views.MainWindow;
+import views.RegisterPerson;
+
+public class Relations {
+	public void startSystem() {
+		MainWindow mainWindow = new MainWindow();
+		Controller controller = new Controller();
+		ConsultPerson consultPerson = new ConsultPerson();
+		RegisterPerson registerPerson = new RegisterPerson();
+		
+		mainWindow.setController(controller);
+		consultPerson.setController(controller);
+		registerPerson.setController(controller);
+		
+		controller.setMainWindow(mainWindow);
+		
+		
+		mainWindow.setVisible(true);
+	}
+}

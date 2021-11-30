@@ -1,0 +1,40 @@
+package controllers;
+
+import models.Connections;
+import models.PatientsVo;
+import models.Processes;
+import models.QueriesDao;
+import views.ConsultPerson;
+import views.MainWindow;
+import views.RegisterPerson;
+
+public class Relations {
+	public void startSystem() {
+		MainWindow mainWindow = new MainWindow();
+		Controller controller = new Controller();
+		ConsultPerson consultPerson = new ConsultPerson();
+		RegisterPerson registerPerson = new RegisterPerson(yes,MainWindow);
+		Connections connection = new Connections();
+		Processes processes = new Processes();
+		PatientsVo patientsVo = new PatientsVo();
+		QueriesDao queriesDao = new QueriesDao();
+		
+		mainWindow.setController(controller);
+		consultPerson.setController(controller);
+		registerPerson.setController(controller);
+		connection.setController(controller);
+		processes.setController(controller);
+		patientsVo.setController(controller);
+		queriesDao.setController(controller);
+		
+		controller.setMainWindow(mainWindow);
+		controller.setConsultPerson(consultPerson);
+		controller.setRegisterPerson(registerPerson);
+		controller.setConnection(connection);
+		controller.setProcesses(processes);
+		controller.setPatientesVo(patientsVo);
+		controller.setQueriesDao(queriesDao);
+		
+		mainWindow.setVisible(true);
+	}
+}

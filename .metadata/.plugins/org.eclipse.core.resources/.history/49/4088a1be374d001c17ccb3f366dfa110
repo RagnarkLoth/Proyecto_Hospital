@@ -1,0 +1,20 @@
+package models;
+
+import controllers.Controller;
+import java.sql.*;
+
+public class Connection {
+	
+	private Controller controller;
+	
+	Connection myConnection = null;
+	String result = "";
+	
+	public Connection 
+	
+	
+	public void setController(Controller controller) {
+		this.controller = controller;
+	}
+
+}

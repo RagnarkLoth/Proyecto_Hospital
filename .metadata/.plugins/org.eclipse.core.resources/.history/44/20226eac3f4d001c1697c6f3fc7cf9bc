@@ -1,0 +1,22 @@
+package models;
+
+import controllers.Controller;
+import java.sql.*;
+
+public class Connections {
+	
+	private Controller controller;
+	
+	Connection myConnection = null;
+	String result = "";
+	
+	public Connection giveMeConnection() {
+		myConnection = DriverManager.getConnection("jdbc:mysql://localhost/notas?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "");
+	}
+	
+	
+	public void setController(Controller controller) {
+		this.controller = controller;
+	}
+
+}

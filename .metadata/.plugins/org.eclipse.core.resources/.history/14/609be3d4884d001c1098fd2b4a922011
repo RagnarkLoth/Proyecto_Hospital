@@ -1,0 +1,70 @@
+package models;
+
+public class PatientsVo {
+	private int idPatient;
+	private String namee;
+	private String direction;
+	private int telephone;
+	private String operator;
+	private int daysHospitalization;
+	private double drugCost;
+	private double totalPay;
+	private int idTreatmentFK;
+	private Controller controller;
+	
+	public int getIdPatient() {
+		return idPatient;
+	}
+	public void setIdPatient(int idPatient) {
+		this.idPatient = idPatient;
+	}
+	public String getNamee() {
+		return namee;
+	}
+	public void setNamee(String namee) {
+		this.namee = namee;
+	}
+	public String getDirection() {
+		return direction;
+	}
+	public void setDirection(String direction) {
+		this.direction = direction;
+	}
+	public int getTelephone() {
+		return telephone;
+	}
+	public void setTelephone(int telephone) {
+		this.telephone = telephone;
+	}
+	public String getOperator() {
+		return operator;
+	}
+	public void setOperator(String operator) {
+		this.operator = operator;
+	}
+	public int getDaysHospitalization() {
+		return daysHospitalization;
+	}
+	public void setDaysHospitalization(int daysHospitalization) {
+		this.daysHospitalization = daysHospitalization;
+	}
+	public double getDrugCost() {
+		return drugCost;
+	}
+	public void setDrugCost(double drugCost) {
+		this.drugCost = drugCost;
+	}
+	public double getTotalPay() {
+		return totalPay;
+	}
+	public void setTotalPay(double totalPay) {
+		this.totalPay = totalPay;
+	}
+	public int getIdTreatmentFK() {
+		return idTreatmentFK;
+	}
+	public void setIdTreatmentFK(int idTreatmentFK) {
+		this.idTreatmentFK = idTreatmentFK;
+	}
+	
+}

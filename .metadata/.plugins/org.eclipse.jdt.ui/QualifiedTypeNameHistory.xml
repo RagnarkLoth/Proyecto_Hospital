@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="views.MainWindow"/>
+    <fullyQualifiedTypeName name="javax.swing.table.JTableHeader"/>
+    <fullyQualifiedTypeName name="views.ConsultPerson"/>
+    <fullyQualifiedTypeName name="views.RegisterPerson"/>
+    <fullyQualifiedTypeName name="models.Connection"/>
+    <fullyQualifiedTypeName name="models.Processes"/>
+    <fullyQualifiedTypeName name="models.PatientsVo"/>
+    <fullyQualifiedTypeName name="models.QueriesDao"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="models.TreatmentVo"/>
+    <fullyQualifiedTypeName name="models.TreatmentDao"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="javax.swing.table.TableModel"/>
+    <fullyQualifiedTypeName name="views.DocumentPerson"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="controllers.Controller"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,16 @@
+package models;
+
+import controllers.Controller;
+
+public class TreatmentVo {
+	
+	private int idTreatment;
+	private String nameTreatment;
+	private double treatmenValue;
+	private Controller controller;
+
+	public void setController(Controller controller) {
+		this.controller = controller;
+	}
+
+}

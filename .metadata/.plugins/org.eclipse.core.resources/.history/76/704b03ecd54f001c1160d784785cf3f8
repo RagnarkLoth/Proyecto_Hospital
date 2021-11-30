@@ -1,0 +1,80 @@
+package views;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.event.*;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.border.EmptyBorder;
+import javax.swing.table.JTableHeader;
+
+import controllers.Controller;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import com.jgoodies.forms.factories.DefaultComponentFactory;
+import java.awt.Font;
+import javax.swing.JComboBox;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class ConsultPerson extends JDialog implements ActionListener{
+		
+	private Controller controller;
+	private JScrollPane scroll;
+	private final JPanel contentPanel = new JPanel();
+	private JTable table;
+	private String[] headboardTable = {
+			"Nombre", "Documento", "Direccion", "Telefono", "Cargo", "Días Hospitalizado", "Costo Medicamentos", "Nombre Compañia", "Costo Tratamiento", "Pago Total"
+	};
+	private JTableHeader header;
+	private JButton btnCheckAll;
+	
+	public ConsultPerson(boolean modal, MainWindow mainWindow) {
+		super(mainWindow, modal);
+		setBounds(100, 100, 1121, 388);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		
+		startComponents();
+		
+	}
+
+	private void startComponents() {
+		
+		String[][] dataTable = {};
+		table = new JTable(dataTable, headboardTable);
+		scroll = new JScrollPane();
+		scroll.setLocation(0, 99);
+		scroll.setSize(1113, 250);
+		scroll.setViewportView(table);
+		contentPanel.add(scroll);
+		
+		btnCheckAll = new JButton("CONSULTAR TODO");
+		btnCheckAll.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 17));
+		btnCheckAll.setBounds(220, 32, 211, 38);
+		btnCheckAll.addActionListener(this);
+		contentPanel.add(btnCheckAll);
+		
+		JButton btnIndividual = new JButton("CONSULTA INDIVIDUAL");
+		btnIndividual.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 17));
+		btnIndividual.setBounds(664, 32, 229, 38);
+		contentPanel.add(btnIndividual);
+	}
+
+	public void setController(Controller controller) {
+		this.controller = controller;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource() == btnCheckAll) {
+			dataTable = controller.setDataTable();
+ 		}
+	}
+}

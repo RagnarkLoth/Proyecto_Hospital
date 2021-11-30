@@ -1,0 +1,13 @@
+package models;
+
+import controllers.Controller;
+
+public class Connection {
+	
+	private Connection connection;
+	
+	public void setController(Controller controller) {
+		this.
+	}
+
+}

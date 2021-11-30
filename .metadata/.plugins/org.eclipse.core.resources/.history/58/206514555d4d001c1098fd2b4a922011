@@ -1,0 +1,28 @@
+package controllers;
+
+import models.Connections;
+import views.ConsultPerson;
+import views.MainWindow;
+import views.RegisterPerson;
+
+public class Relations {
+	public void startSystem() {
+		MainWindow mainWindow = new MainWindow();
+		Controller controller = new Controller();
+		ConsultPerson consultPerson = new ConsultPerson();
+		RegisterPerson registerPerson = new RegisterPerson();
+		Connections connection = new Connections();
+		
+		mainWindow.setController(controller);
+		consultPerson.setController(controller);
+		registerPerson.setController(controller);
+		connection.setController(controller);
+		
+		controller.setMainWindow(mainWindow);
+		controller.setConsultPerson(consultPerson);
+		controller.setRegisterPerson(registerPerson);
+		controller.setConnection(connection);
+		
+		mainWindow.setVisible(true);
+	}
+}

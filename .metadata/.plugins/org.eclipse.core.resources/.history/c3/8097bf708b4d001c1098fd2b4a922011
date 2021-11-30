@@ -1,0 +1,33 @@
+package models;
+
+import controllers.Controller;
+
+public class TreatmentVo {
+	
+	private int idTreatment;
+	private String nameTreatment;
+	private double treatmentValue;
+	private Controller controller;
+	public int getIdTreatment() {
+		return idTreatment;
+	}
+	public void setIdTreatment(int idTreatment) {
+		this.idTreatment = idTreatment;
+	}
+	public String getNameTreatment() {
+		return nameTreatment;
+	}
+	public void setNameTreatment(String nameTreatment) {
+		this.nameTreatment = nameTreatment;
+	}
+	public double getTreatmentValue() {
+		return treatmentValue;
+	}
+	public void setTreatmentValue(double treatmentValue) {
+		this.treatmentValue = treatmentValue;
+	}
+	public void setController(Controller controller) {
+		this.controller = controller;
+	}
+	
+}

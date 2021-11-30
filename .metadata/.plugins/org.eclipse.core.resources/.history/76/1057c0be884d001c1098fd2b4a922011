@@ -1,0 +1,13 @@
+package models;
+
+public class PatientsVo {
+	private int idPatient;
+	private String namee;
+	private String direction;
+	private int telephone;
+	private String operator;
+	private int daysHospitalization;
+	private double drugCost;
+	private double totalPay;
+	private int idTreatmentFK;
+}
